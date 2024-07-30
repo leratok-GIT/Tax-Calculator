@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="tax-form">
+            <label for="age">Are you younger than 65 years? (Yes/No)</label>
+            <input type="text" id="age" name="age"><br><br>
+            <label for="income">Enter your annual income:</label>
+            <input type="number" id="income" name="income"><br><br>
+            <label for="deductions">Enter your deductions:</label>
+            <input type="number" id="deductions" name="deductions"><br><br>
+            <label for="exemptions">Enter your exemptions:</label>
+            <input type="number" id="exemptions" name="exemptions"><br><br>
+            <button id="calculate-btn">Calculate Tax</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

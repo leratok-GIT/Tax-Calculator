@@ -111,7 +111,8 @@ public class TaxCalculator extends JFrame {
             } else {
                 income -= 95750;
             }
-        } else {
+        } 
+        else {
             if (income <= 148217) {
                 return 0.0;
             } else if (income <= 165689) {
