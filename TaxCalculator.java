@@ -12,6 +12,7 @@ public class TaxCalculator extends JFrame {
     private final JTextField exemptionsField;
     private final JLabel resultLabel;
 
+    // building the GUI
     public TaxCalculator() {
         // Set up the frame
         setTitle("Tax Calculator");
