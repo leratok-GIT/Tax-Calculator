@@ -1,8 +1,14 @@
 package taxcalculator;
 
-import javax.swing.*;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 public class TaxCalculator extends JFrame {
 
@@ -22,7 +28,7 @@ public class TaxCalculator extends JFrame {
         getContentPane().setBackground(new Color(220, 220, 220)); // Light gray background
 
         // Create components with colors
-        JLabel ageLabel = new JLabel("Are you younger than 65 years? (Yes/No)");
+        JLabel ageLabel = new JLabel("Enter your age:");
         ageLabel.setForeground(Color.BLUE);
         ageField = new JTextField();
         ageField.setBackground(Color.WHITE);
@@ -70,10 +76,7 @@ public class TaxCalculator extends JFrame {
     private void calculateTax() {
         try {
             // Get and validate inputs
-            String ageResponse = ageField.getText().trim().toLowerCase();
-            if (!ageResponse.equals("yes") && !ageResponse.equals("no")) {
-                throw new IllegalArgumentException("Invalid input for age. Please enter 'Yes' or 'No'.");
-            }
+            int age = Integer.parseInt(ageField.getText().trim());
 
             double annualIncome = Double.parseDouble(incomeField.getText().trim());
             double deductions = Double.parseDouble(deductionsField.getText().trim());
@@ -89,34 +92,36 @@ public class TaxCalculator extends JFrame {
                 throw new IllegalArgumentException("Taxable income cannot be negative. Check your inputs.");
             }
 
-            boolean isUnder65 = ageResponse.equals("yes");
-            double tax = calculateTax(taxableIncome, isUnder65);
+            double tax = calculateTax(taxableIncome, age);
 
             resultLabel.setText(String.format("Your tax obligation is: %.2f", tax));
 
         } catch (NumberFormatException e) {
-            resultLabel.setText("Invalid input. Please enter numerical values for income, deductions, and exemptions.");
+            resultLabel.setText("Invalid input. Please enter \n numerical values for age, income, \n deductions, and exemptions.");
         } catch (IllegalArgumentException e) {
             resultLabel.setText(e.getMessage());
         }
     }
 
-    public static double calculateTax(double income, boolean isUnder65) {
+    public static double calculateTax(double income, int age) {
         double tax = 0.0;
 
-        // Apply tax-free thresholds
-        if (isUnder65) {
+        // Apply tax-free thresholds based on age
+        if (age < 65) {
             if (income <= 95750) {
                 return 0.0;
             } else {
                 income -= 95750;
             }
-        } 
-        else {
+        } else if (age >= 65 && age <= 75) {
             if (income <= 148217) {
                 return 0.0;
-            } else if (income <= 165689) {
+            } else {
                 income -= 148217;
+            }
+        } else {
+            if (income <= 165689) {
+                return 0.0;
             } else {
                 income -= 165689;
             }
