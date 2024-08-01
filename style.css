@@ -7,7 +7,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     justify-content: center;
-    background: url(img/calc\ pic.avif);
+    background: url(img/p22.jpg);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -28,6 +28,7 @@ body {
 }
 h1{
     text-align: center;
+    color: rgba(23, 158, 95, 0.582);
 }
 /* Form Styling */
 form {
@@ -38,6 +39,7 @@ form {
 
 label {
     font-weight: bold;
+    color: #17458bc7;
 }
 
 input {
@@ -60,7 +62,7 @@ button {
 }
 
 #calculate-button {
-    background-color: #007bff;
+    background-color:rgba(20, 151, 90, 0.582);
     color: #fff;
 }
 
@@ -71,13 +73,14 @@ button {
 
 /* Footer Styling */
 footer {
-    background-color: #f8f9fa;
+    background-color:rgba(32, 114, 110, 0.712);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #e9ecef;
     position: fixed;
     bottom: 0;
     width: 100%;
+    
 }
 
 footer p {
