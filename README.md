@@ -31,7 +31,7 @@ The Tax Calculator System is a Java-based application designed to calculate the 
 ## Usage
  
 1. Run the `TaxCalculatorGUI` class to start the application.
-2. Input your age group (Yes/No for younger than 65 years).
+2. Input your age.
 3. Enter your annual income, deductions, and exemptions.
 4. Click the "Calculate Tax" button to view your tax obligation.
 5. A dialog box will prompt you to calculate again or exit the application.
@@ -44,12 +44,12 @@ The Tax Calculator System is a Java-based application designed to calculate the 
 ## Example
  
 1. Input: 
-    - Are you younger than 65 years? `Yes`
+    - What is your age? `65`
     - Annual income: `200000`
     - Deductions: `20000`
     - Exemptions: `5000`
 2. Output:
-    - Your tax obligation is: `28290.00`
+    - Your tax obligation is: `R4820.94`
 
 # What you will see:
 ![image](https://github.com/user-attachments/assets/b3a6bae2-400a-445e-a210-cfdae0a20a76)
