@@ -52,10 +52,12 @@ The Tax Calculator System is a Java-based application designed to calculate the 
     - Your tax obligation is: `28290.00`
 
 # What you will see:
-![image](https://github.com/user-attachments/assets/44bfacf3-0592-4303-a815-e2b6e5d7f476)
+![image](https://github.com/user-attachments/assets/b3a6bae2-400a-445e-a210-cfdae0a20a76)
+
 
 # The validation:
-![image](https://github.com/user-attachments/assets/2efc63ed-f258-46f9-85aa-eaa0e46bd32a)
+![Screenshot (14)](https://github.com/user-attachments/assets/a011f8f6-73dc-4910-8a12-a2f1bf99790d)
+
 
 ## Contributing
  
