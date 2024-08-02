@@ -1,3 +1,4 @@
+
 package taxcalculator;
 
 
@@ -9,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-
+// the jframe sets up the main windows of the application
 public class TaxCalculator extends JFrame {
 
     private final JTextField ageField;
@@ -22,12 +23,13 @@ public class TaxCalculator extends JFrame {
         // Set up the frame
         setTitle("Tax Calculator");
         setSize(500, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setLayout(new GridLayout(6, 2, 10, 10));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ensures the application exits when code is closed
+        setLocationRelativeTo(null); // centers the windows on the screen
+        setLayout(new GridLayout(6, 2, 10, 10)); //adds the padding with gaps
         getContentPane().setBackground(new Color(220, 220, 220)); // Light gray background
 
         // Create components with colors
+        // jLabel display the calculated tax result
         JLabel ageLabel = new JLabel("Enter your age:");
         ageLabel.setForeground(Color.BLUE);
         ageField = new JTextField();
@@ -47,7 +49,7 @@ public class TaxCalculator extends JFrame {
         exemptionsLabel.setForeground(Color.BLUE);
         exemptionsField = new JTextField();
         exemptionsField.setBackground(Color.WHITE);
-
+        // the button
         JButton calculateButton = new JButton("Calculate Tax");
         calculateButton.setBackground(Color.BLUE);
         calculateButton.setForeground(Color.white);
